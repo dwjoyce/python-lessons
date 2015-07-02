@@ -7,27 +7,27 @@ import random
 possible_choices = ['paper', 'rock', 'scissors']
 
 while True:
-    user_choice = raw_input("What's your choice: paper, rock or scissors (or quit)? ")
-    
+    user_choice = input("What's your choice: paper, rock or scissors (or quit)? ")
+
     if user_choice == 'quit':  # break out of loop
         break
 
     computer_choice = random.choice(possible_choices)
 
-    if not user_choice in possible_choices:
-        print "Sorry, don't understand that choice. Let's try again!"
+    if user_choice not in possible_choices:
+        print("Sorry, don't understand that choice. Let's try again!")
     elif user_choice == computer_choice:
-        print "I choose", computer_choice, "too, let's try again!"
+        print("I choose", computer_choice, "too, let's try again!")
     else:
-        print "I choose " + computer_choice + ". ",
-        
-        if ((user_choice == 'paper' and computer_choice == 'rock')     or
-            (user_choice == 'rock' and computer_choice == 'scissors')  or
-            (user_choice == 'scissors' and computer_choice == 'paper')):           
-            print "You win!",
+        print("I choose " + computer_choice + ". ", end=" ")
+
+        if ((user_choice == 'paper' and computer_choice == 'rock') or
+            (user_choice == 'rock' and computer_choice == 'scissors') or
+            (user_choice == 'scissors' and computer_choice == 'paper')):
+            print("You win!", end=" ")
         else:
-            print "I win!",
+            print("I win!", end=" ")
 
-        print " Let's play again!"
+        print("Let's play again!")
 
-    print
+    print()

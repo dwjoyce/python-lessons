@@ -10,15 +10,15 @@ p = turtle.Pen()
 p.reset()
 p.speed(0)
 
-width, height = p.window_width(), p.window_height()
+width, height = p.screen.window_width(), p.screen.window_height()
 
 while True:
     p.up()
-    x = random.randint(-width / 2, width / 2)
-    y = random.randint(-height / 2, height / 2)
+    x = random.randint(-width // 2, width // 2)
+    y = random.randint(-height // 2, height // 2)
     p.goto(x, y)
     p.down()
-    
+
     length = random.randint(10, 100)
 
     p.fillcolor(random.random(), random.random(), random.random())

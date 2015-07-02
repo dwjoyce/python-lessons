@@ -4,12 +4,12 @@
 
 a_value = ord('A')
 
-sentence = raw_input('Please enter your sentence: ')
+sentence = input('Please enter your sentence: ')
 sentence = sentence.upper()
 
 total = 0
 
 for letter in sentence:
     total = total + ord(letter) - a_value + 1
-    
-print 'The total of your sentence is:', total
+
+print('The total of your sentence is:', total)

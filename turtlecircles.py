@@ -11,7 +11,7 @@ colour_index = 0
 
 while True:
     for i in range(number_turns):
-        for size in range(10,200,step):
+        for size in range(10, 200, step):
             p.pencolor(colours[colour_index])
             p.circle(size)
         colour_index = colour_index + 1

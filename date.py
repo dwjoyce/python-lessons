@@ -2,10 +2,10 @@
 
 # Rules for day postfix: 11 - 19: th, endswith 1: st, 2: nd, 3: rd, else: th
 
-month_names = ['January','February','March','April','May','June',
-               'July','August','September','October','November','December']
+month_names = ['January', 'February', 'March', 'April', 'May', 'June',
+               'July', 'August', 'September', 'October', 'November', 'December']
 
-date = raw_input('What is today\'s date? ')
+date = input('What is today\'s date? ')
 d, m, y = date.split('/')
 
 if d >= '11' and d <= '19':
@@ -19,6 +19,4 @@ elif d.endswith('3'):
 else:
     postfix = 'th'
 
-print d, postfix, month_names[int(m) - 1], y
-
-print '%s%s %s %s' % (d, postfix, month_names[int(m) - 1], y)
+print(d + postfix, month_names[int(m) - 1], y)
