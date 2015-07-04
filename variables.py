@@ -8,14 +8,14 @@ b = 20
 c = a * b + 12 / 3  # this will amount to: a + b + 4
 
 # The print command can receive a number of items, with a comma between each
-print a, b, c
+print(a, b, c)
 
 # You can then make variable c refer to a different value
 
 c = b + a
 c = c + 1  # add one onto the value of c, and assign it back to c, same as 'c += 1'
 
-print 'New value for c is', c
+print('New value for c is', c)
 
 # Variables names must start with a letter, but can be followed by
 # numbers or underscore '_' character
@@ -23,4 +23,4 @@ print 'New value for c is', c
 my_name = 'Fred'
 my_age = 99
 
-print 'hello there', my_name, 'you are', my_age, 'years old.'
+print('hello there', my_name, 'you are', my_age, 'years old.')

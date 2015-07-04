@@ -3,6 +3,7 @@
 import turtle
 import random
 
+
 def draw_polygon(p, x, y, sides, length, pcol, fcol):
     '''Draw one polygon using supplied position, sides, length, etc.'''
     p.up()
@@ -16,17 +17,18 @@ def draw_polygon(p, x, y, sides, length, pcol, fcol):
         p.right(360 / sides)
     p.end_fill()    # end shape, so it can be filled in
 
+
 def draw_number_polygons(p, num_polygons):
     '''Draw a number of polygons using p for pen'''
     for num in range(num_polygons):
         # The position is half the width from the left to right, and half the
         # height from top to bottom. So if window is 400, 300 then it goes
         # from -200 to 200 across and 150 to -150 down.
-        width = p.window_width()
-        height = p.window_height()
-        x = random.randint(-width / 2, width / 2)
-        y = random.randint(-height / 2, height / 2)
-        
+        width = p.screen.window_width()
+        height = p.screen.window_height()
+        x = random.randint(-width // 2, width // 2)
+        y = random.randint(-height // 2, height // 2)
+
         sides = random.randint(3, 10)  # from triangles to decagons!
         length = 400 / sides  # make shapes about the same size
 

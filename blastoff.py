@@ -4,9 +4,9 @@
 
 import time
 
-start = int(raw_input("Countdown timer:  How many seconds? "))
-for i in range (start, 0, -1):
-    print i, '*' * i
+start = int(input("Countdown timer:  How many seconds? "))
+for i in range(start, 0, -1):
+    print(i, '*' * i)
     time.sleep(1)  # number of seconds
 
-print "BLAST OFF!"
+print("BLAST OFF!")
