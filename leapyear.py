@@ -1,24 +1,23 @@
 # leapyear.py
-# Ask the user for a year, and tell the user whether it is a leap year or not
+# Program to ask for a year, and tell user whether it is a leap year or not.
 
-# Get a year from the user via a call to input(), and then convert it
-# straight away into an integer
-year = int(input('Please input year: '))
+# The rules are:
+#  - if divisible by 400, then print out 'leap year'
+#  - else if divisible by 100, then print out 'not leap year'
+#  - else if divisible by 4, then print out 'leap year'
+#  - else print out 'not leap year'
 
-# Set boolean "leap_year" to True if it is a leap year, otherwise False
+year = input('What year? ')
+year = int(year)
+
 if year % 400 == 0:
-    leap_year = True
+    print("That's a leap year!")
 elif year % 100 == 0:
-    leap_year = False
+    print("That's not a leap year!")
 elif year % 4 == 0:
-    leap_year = True
+    print("That's a leap year!")
 else:
-    leap_year = False
+    print("That's not a leap year!")
 
-# This could be turned into one line with the following:
-# leap_year = (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0)
-
-if leap_year:
-    print('The year', year, 'is a leap year.')
-else:
-    print('The year', year, 'is not a leap year.')
+# or you can test for leap year in one line as follows:
+# ((year % 400) == 0) or (year % 4 == 0 and year % 100 != 0)

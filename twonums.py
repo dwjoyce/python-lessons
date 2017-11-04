@@ -1,20 +1,20 @@
 # twonums.py
-# Input two numbers, print out in order from least to greatest, with total and average
+# Input two numbers, print(out in order from smallest to largest, along with total and average
 
-a = input('Please enter the first number: ')
-b = input('Please enter the second number: ')
+first_num_str = input("Please enter the first number: ")
+second_num_str = input("Please enter the second number: ")
 
-a = int(a)
-b = int(b)
+first_num = int(first_num_str)
+second_num = int(second_num_str)
 
-print("The correct order of the numbers is:", end=" ")
+print("The correct order of the numbers is: ", end="")
 
-if a <= b:
-    print(a, b)
+if first_num < second_num:
+    print(first_num, second_num)
 else:
-    print(b, a)
+    print(second_num, first_num)
 
-total = a + b
+total = first_num + second_num
 average = total / 2
 
-print('Sum of numbers is', total, 'and the average is', average)
+print("Sum of numbers is", total, "and the average is", average)

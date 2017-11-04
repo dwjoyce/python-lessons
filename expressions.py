@@ -1,5 +1,5 @@
 '''
-An expression in programming is a value or a combination
+An expression in programming is a value or a combination 
 of values with operators
 
 Expression -> Expression Operator Expression
@@ -7,10 +7,15 @@ Expression -> Number
 Expression -> String
 Expression -> Boolean
 Expression -> (Expression)
-Operator   -> + - * / % == > < >= <= != and or not
+Operator   -> + - * / % ** == != > < >= <= and or not
 Number     -> 0 1 2 3 ...
 String     -> 'a' 'b' 'c' ...
 Boolean    -> True False
+
+print(<Expression>
+variable_name = <Expression>
+if <Expression>:
+    do something
 
 For example:
 
@@ -26,7 +31,7 @@ For example:
 
 M1 = 10
 M2 = 20
-M3 = M1 + M2   # so M3 should be 30
+M3 = M1 + M2   # so M3 will be 30
 
 # ... but in programming, we can use more descriptive names,
 # variables are usually in lowercase with the underscore '_'
@@ -46,7 +51,7 @@ print('Hello', user_name)
 
 user_age_str = input('What is your age? ')
 user_age = int(user_age_str)
-print('You are', user_age, 'years old')
+print('You are', user_age + 10, 'years old in 10 years time!')
 
 # Compare numbers with comparison operators...
 
@@ -69,7 +74,7 @@ car_cost = int(car_cost)
 
 if (car_type == 'sport' and
     (car_colour == 'red' or car_colour == 'blue') and
-        car_cost < 10000):
+    car_cost < 10000):
     print('I want that car!')
 else:
     print('I\'ll pass on that one!')

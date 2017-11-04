@@ -1,22 +1,23 @@
-# Accept date from user in format DD/MM/YY, and print out in format: 22nd April 2014
+# date.py
+# Ask for the current date in the format DD/MM/YY, and print out in a more readable form
 
-# Rules for day postfix: 11 - 19: th, endswith 1: st, 2: nd, 3: rd, else: th
+months = "January February March April May June July August September October November December"
+month_names = months.split()
 
-month_names = ['January', 'February', 'March', 'April', 'May', 'June',
-               'July', 'August', 'September', 'October', 'November', 'December']
+date = input("What is today's date, in the format DD/MM/YY? ")
 
-date = input('What is today\'s date? ')
-d, m, y = date.split('/')
+d, m, y = date.split("/")
+m = int(m)
 
-if d >= '11' and d <= '19':
-    postfix = 'th'
-elif d.endswith('1'):
-    postfix = 'st'
-elif d.endswith('2'):
-    postfix = 'nd'
-elif d.endswith('3'):
-    postfix = 'rd'
+if d >= "11" and d <= "19":
+    postfix = "th"
+elif d.endswith("1"):
+    postfix = "st"
+elif d.endswith("3"):
+    postfix = "rd"
+elif d.endswith("2"):
+    postfix = "nd"
 else:
-    postfix = 'th'
+    postfix = "th"
 
-print(d + postfix, month_names[int(m) - 1], y)
+print("Today's date is", d + postfix, "of", month_names[m - 1], y)

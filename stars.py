@@ -5,28 +5,27 @@
 import turtle
 import random
 
-p = turtle.Pen()
+window_size = 600
 
-p.reset()
-p.speed(0)
-
-width, height = p.screen.window_width(), p.screen.window_height()
+turtle.setup(window_size, window_size)
+turtle.speed(0)
 
 while True:
-    p.up()
-    x = random.randint(-width // 2, width // 2)
-    y = random.randint(-height // 2, height // 2)
-    p.goto(x, y)
-    p.down()
+    turtle.up()
+    x = random.randint(-window_size // 2, window_size // 2)
+    y = random.randint(-window_size // 2, window_size // 2)
+    turtle.goto(x, y)
+    turtle.down()
 
     length = random.randint(10, 100)
 
-    p.fillcolor(random.random(), random.random(), random.random())
-    p.begin_fill()
+    turtle.fillcolor(random.random(), random.random(), random.random())
+    turtle.begin_fill()
     for side in range(10):
-        p.forward(length)
-        if side % 2:
-            p.right(144)
+        turtle.forward(length)
+        # Depending on whether the side is even or odd, turn right or left
+        if (side % 2) == 0:
+            turtle.right(144)
         else:
-            p.left(72)
-    p.end_fill()
+            turtle.left(72)
+    turtle.end_fill()

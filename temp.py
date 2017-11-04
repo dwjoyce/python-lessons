@@ -1,9 +1,7 @@
 # temp.py
-# Ask user for temperate in Fahrenheit, and print out temperate in celsius.
+# Ask for temperature in fahrenheit, and print out the equivelent in celsius
 
-tf_str = input('What is the temperature in fahrenheit? ')
-tf = int(tf_str)
-
-tc = (5 / 9) * (tf - 32)
-
-print('The temperature in celsius is', tc)
+fah_str = input("What is the temperature in fahrenheit? ")
+fah = int(fah_str)
+cel = 5 / 9 * (fah - 32)
+print("The temperature in celsius is", cel)

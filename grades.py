@@ -1,22 +1,22 @@
 # grades.py
-# Ask for a score or mark (out of a 100), and print out grade from 'A' to 'F'
+# Ask for a score or mark (out of a 100), and print out grade
 
-score = int(input('What if your score, 0-100: '))
+score_str = input("What is your score, 0 to 100: ")
+score = int(score_str)
 
-# Trail print with a comma, and it will append the next print onto this one
-print('Your grade is', end=' ')
+print("Your grade is ", end="")
 
 if score < 0 or score > 100:
-    print('invalid!')
+    print("not valid!")
 elif score >= 90:
-    print('A')
+    print("A")
 elif score >= 80:
-    print('B')
+    print("B")
 elif score >= 70:
-    print('C')
+    print("C")
 elif score >= 60:
-    print('D')
+    print("D")
 elif score >= 50:
-    print('E')
+    print("E")
 else:
-    print('F')
+    print("F")

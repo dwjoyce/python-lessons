@@ -1,20 +1,25 @@
+# turtlecircles.y
+# Program to draw a number of circles, panning out from the centre,
+# then turn, and drawing another line of circles.  Continue this forever!
+
 import turtle
 
-colours = ['red', 'green', 'blue', 'yellow', 'cyan', 'magenta', 'brown', 'purple', 'orange', 'black']
+colors = ["red", "green", "blue", "yellow", "cyan", "magenta", "brown", "purple", "orange", "black"]
 number_turns = 8
-step = 10
+step = 5
 
-p = turtle.Pen()
-p.speed('fastest')
+turtle.setup(600, 600)
+turtle.speed(0)
+turtle.pensize(2)
 
-colour_index = 0
+color_index = 0
 
 while True:
-    for i in range(number_turns):
-        for size in range(10, 200, step):
-            p.pencolor(colours[colour_index])
-            p.circle(size)
-        colour_index = colour_index + 1
-        if colour_index >= len(colours):
-            colour_index = 0
-        p.left(360 / number_turns)
+    for size in range(10, 200, step):
+        turtle.pencolor(colors[color_index])
+        turtle.circle(size)
+
+    color_index = color_index + 1
+    if color_index >= len(colors):
+        color_index = 0
+    turtle.left(360 / number_turns)
