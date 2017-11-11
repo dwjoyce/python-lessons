@@ -21,13 +21,13 @@ while True:
     else:
         print("I choose " + computer_choice + ". ", end="")
 
-        if (user_choice == "paper" and computer_choice == "rock"
-            or user_choice == "rock" and computer_choice == "scissors"
-            or user_choice == "scissors" and computer_choice == "paper"):
-                print("You win!")
+        if (user_choice == "paper" and computer_choice == "rock" or
+            user_choice == "rock" and computer_choice == "scissors" or
+            user_choice == "scissors" and computer_choice == "paper"):
+            print("You win!")
         else:
             print("I win!")
 
         print("Let's play again!")
 
-    print()
+    print()  # output blank line
