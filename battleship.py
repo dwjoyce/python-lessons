@@ -20,6 +20,10 @@ while guesses < 5:
     elif (user_row < 1 or user_row > map_size or
           user_col < 1 or user_col > map_size):
         print("That\"s not even on the map!")
+    elif user_row == ship_row:
+        print("Missed, but the row was correct!")
+    elif user_col == ship_col:
+        print("Missed, but the column was correct!")
     else:
         print("Wrong!  My ship survives to fight another day!")
 
