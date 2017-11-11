@@ -13,4 +13,4 @@ while True:
     numbers = numbers + 1
 
 print("Sum is", sum)
-print("Average is", sum/numbers)
+print("Average is", sum / numbers)

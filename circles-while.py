@@ -17,5 +17,5 @@ num = 0
 while num < number_circles:
     turtle.circle(100)
     turtle.left(360 / number_circles)
-    
+
     num = num + 1

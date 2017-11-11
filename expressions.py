@@ -1,5 +1,5 @@
 '''
-An expression in programming is a value or a combination 
+An expression in programming is a value or a combination
 of values with operators
 
 Expression -> Expression Operator Expression
@@ -75,7 +75,7 @@ car_cost = int(car_cost)
 if (car_type == 'sport' and
     (car_colour == 'red' or car_colour == 'blue') and
     car_cost < 10000):
-    print('I want that car!')
+        print('I want that car!')
 else:
     print('I\'ll pass on that one!')
 

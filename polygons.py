@@ -18,7 +18,7 @@ while True:
         x = random.randrange(-300, 300)
         y = random.randrange(-300, 300)
         turtle.goto(x, y)
-        
+
         num_sides = random.randrange(3, 11)
         length = random.randrange(10, 100)
 

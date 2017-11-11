@@ -24,7 +24,6 @@ elif pet == "cat":
     elif age == 2:
         print(25)
     else:
-        print(25 + (age - 2) * 4)  
+        print(25 + (age - 2) * 4)
 else:
     print("Sorry, I can't convert the age for that kind of animal!")
-

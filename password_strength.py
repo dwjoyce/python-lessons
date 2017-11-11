@@ -6,16 +6,16 @@ valid_password = False
 
 while not valid_password:
     password_string = input("Please enter the password: ")
-    
+
     if len(password_string) < 6:
         print("Password too short!")
-        
+
     elif len(password_string) > 12:
         print("Password too long!")
-        
-    else:        
+
+    else:
         lowercase = uppercase = numerical = 0
-        
+
         for character in password_string:
             if character.islower():
                 lowercase = 1

@@ -6,6 +6,6 @@ for row in range(1, 13):
     for col in range(1, 13):
         print(row * col, end=" ")
     print()
- 
+
 # To print out in a nicer format with the numbers in neat columsn, use the following print statement:
 #       print("%3d " % (row * col), end="")
