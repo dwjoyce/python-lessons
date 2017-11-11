@@ -25,10 +25,10 @@ while counter < num:
     blue = random.randrange(256)
 
     turtle.fillcolor(red, green, blue)
-    
+
     turtle.begin_fill()
     radius = random.randrange(5, 200)
     turtle.circle(radius)
     turtle.end_fill()
-    
+
     counter = counter + 1

@@ -8,7 +8,7 @@ my_file = open("myfile.txt")
 text_lines = []
 
 for line in my_file:
-    text_lines.append(line)    
+    text_lines.append(line)
 
 my_file.close()
 

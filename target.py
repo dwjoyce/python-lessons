@@ -19,8 +19,7 @@ while num > 0:
     turtle.begin_fill()
     turtle.circle(num * width)
     turtle.end_fill()
-    
+
     num = num - 1
 
 input()
-

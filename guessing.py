@@ -1,6 +1,6 @@
 # guessing.py
 # Store a random number between 1 and 100, and then repeatedly ask the user to guess what
-# this number is.  Allow up the 6 tries, and then print out the answer if it wasn"t guessed.
+# this number is.  Allow up the 6 tries, and then print out the answer if it wasn't guessed.
 
 import random
 
@@ -10,7 +10,7 @@ number_tries = 0
 while number_tries < 6:  # give them 6 tries maximum
     guess = input("What is your guess (between 1 and 100)? ")
     guess = int(guess)
-    
+
     if guess == secret_number:
         break
     elif guess < secret_number:

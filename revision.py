@@ -17,12 +17,12 @@ print('#' * 80, '\n Welcome to Python\n', '#' * 80)
 print(10 + 5 - 3)
 print(10 / 5 * 3)
 print(99 % 5 ** 2)
-print(5.0 // 2 ) # integer divide
+print(5.0 // 2)  # integer divide
 
 # We call functions to do things for us
 print(abs(-123))
 print(len('Hello there'))  # length of any sequence
-print(ord('a') ) # print(out ordinal number of a character
+print(ord('a'))  # print(out ordinal number of a character
 print(bin(183))  # binary of 183 decimal
 print(hex(183))  # hex of 183 decimal
 print(int('101011', 2))  # prints decimal version of binary 1010 (43)
@@ -63,10 +63,10 @@ elif name == 'Fred':
     print('Hello Fred')
 elif (name == 'Bert' or  # use () to go over one line, or the continuation character: \
       name == 'Ernie'):
-     print('How\'s it going in Sesame Street?')
+    print('How\'s it going in Sesame Street?')
 else:
     print('Who on earth are you?')
-    
+
 a = 10
 b = 20
 
@@ -95,22 +95,22 @@ while True:
 # To keep similar things together, use sequences like tuples or lists
 
 # This is a tuple - it cannot be changed
-months = ( 'January', 'February', 'March', 'April', 'May', 'June',
-           'July', 'August', 'September', 'October', 'November', 'December' )
+months = ('January', 'February', 'March', 'April', 'May', 'June',
+          'July', 'August', 'September', 'October', 'November', 'December')
 
 # This is a list, it can be changed
-names = [ 'fred', 'tom', 'dick', 'harry' ]
+names = ['fred', 'tom', 'dick', 'harry']
 
 # Changing a list
 names[3] = 'bob'  # change 'harry' to 'bob'
 names.append('arthur')  # appends an item called 'arthur' to the end of the list
 del names[1]  # removes the second item
-names = names + ['john','zippy']  # adds onto the end of the list
+names = names + ['john', 'zippy']  # adds onto the end of the list
 print(names)
 
 # You can use tuples to set and swap variables around
-a,b,c = 10,20,30
-a,b,c = c,a,b  # a will now be 30, b will be 10, c will be 20
+a, b, c = 10, 20, 30
+a, b, c = c, a, b  # a will now be 30, b will be 10, c will be 20
 
 # and you can use tuples also for printing formatted strings
 print('Here is the sum using 10 columns: %10d' % (1234 * 1234))
@@ -118,11 +118,11 @@ print('pi to two decimal places %.2f' % (3.141592653589793))
 
 # You can create a list from a string
 print(list('The cat sat on the mat'))  # this will be ['T','h','e',' ','c','a','t',' ','s','a','t',' ','o','n',' ','t','h','e',' ','m','a','t']
-l = 'The cat sat on the mat'.split(' ')  # this will be ['The','cat','sat','on','the','mat']
-l.reverse()  # change the order of the list, so it will be ['mat','the','on','sat','cat','The']
+lst = 'The cat sat on the mat'.split(' ')  # this will be ['The','cat','sat','on','the','mat']
+lst.reverse()  # change the order of the list, so it will be ['mat','the','on','sat','cat','The']
 
 # and then put it back in a string
-print(' '.join(l))
+print(' '.join(lst))
 
 # Retrieving items from a sequence
 print('The first month is', months[0])  # sequences start from zero!
@@ -137,17 +137,17 @@ print('Every other month is', months[::2])  # start:end:step, so from start to e
 print('Winter months are', ', '.join(months[9:20]))
 
 # We can ask Python to generate a list of numbers for us
-print('Lots of odd numbers', range(1,100,2))
-print('Lots of even numbers', range(0,100,2))
+print('Lots of odd numbers', range(1, 100, 2))
+print('Lots of even numbers', range(0, 100, 2))
 
 # For loops are easy ways to step through sequences
-for i in range(10,20):  # print(out numbers from 10 to 20
+for i in range(10, 20):  # print(out numbers from 10 to 20
     print(i)
 
-breakfast = ['bacon','egg','tomato','mushroom','bread']
+breakfast = ['bacon', 'egg', 'tomato', 'mushroom', 'bread']
 for item in breakfast:
     print('Yum, I\'m having', item, 'for breakfast.')
-    
+
 # This is how we define our own functions, one value coming in (year), one going out (boolean)
 def isLeapYear(year):
     return (year % 400 == 0 or (year % 4 == 0 and year % 100 != 0))
@@ -163,29 +163,29 @@ def lowest_highest(numbers):  # accepts a list of numbers
     highest = max(numbers)
     return lowest, highest  # returns two values
 
-numbers = [5,10,35,15,50,20]
-low,high = lowest_highest(numbers)
+numbers = [5, 10, 35, 15, 50, 20]
+low, high = lowest_highest(numbers)
 print('The lowest number was', low, 'and the highest was', high)
 
 # You can form lists like this:
 squares = []
-for i in range(1,13):
-    squares.append(i*i)
+for i in range(1, 13):
+    squares.append(i * i)
 print('Squared numbers from 1 to 12 using for loop is', squares)
 
 # Or list comprehensions provide a short-cut, and still quite readable:
-squares = [ i*i for i in range(1,13) ]
+squares = [i * i for i in range(1, 13)]
 print('Squared numbers from 1 to 12 using list comprehension is', squares)
 
 # you can even include a test inside the list, so instead of this:
 leap_years_1900_to_2100 = []
-for year in range(1900,2101):
+for year in range(1900, 2101):
     if isLeapYear(year):
         leap_years_1900_to_2100.append(year)
 print('Leap years from 1900 to 2100 using a for loop loop is', leap_years_1900_to_2100)
 
 # you can do the same with a list comprehension like so:
-leap_years_1900_to_2100 = [ year for year in range(1900,2101) if isLeapYear(year) ]
+leap_years_1900_to_2100 = [year for year in range(1900, 2101) if isLeapYear(year)]
 print('Leap years from 1900 to 2100 using list comprehension is', leap_years_1900_to_2100)
 
 # Storing data in a file:
@@ -198,5 +198,5 @@ output_text_file.close()
 # Read in same file, use 'for' loop
 input_text_file = open('test.txt')  # 'r' read mode is default
 for line in input_text_file:
-    print(line,  end='')  # line includes newline character
+    print(line, end='')  # line includes newline character
 input_text_file.close()

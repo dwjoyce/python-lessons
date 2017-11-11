@@ -11,7 +11,7 @@ for line in my_file:
     words = line.split()
     num_words += len(words)
     num_chars += len(line)
-    
+
 my_file.close()
 
 print("Number lines:", num_lines, "number words:", num_words, "number characters:", num_chars)

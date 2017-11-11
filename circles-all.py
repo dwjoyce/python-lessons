@@ -16,7 +16,7 @@ try:
 except:
     # User didn't type in an integer - just set it to a 100
     number_circles = 100
-    
+
 window_size = 750
 
 turtle.setup(window_size, window_size)
@@ -35,11 +35,11 @@ while True:
         index = index + 1
         if index >= len(color_list):
             index = 0
-            
+
     answer = input("Another turn, y/n? ")
     if answer.upper() == "N":
         print("Bye for now.")
         break
-    
+
     turtle.clear()
     angle = -angle  # Let's turn the other way next time

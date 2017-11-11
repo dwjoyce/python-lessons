@@ -46,13 +46,13 @@ def valid_date(day, month, year):
 
 def days_till_birthday(birthday_day, birthday_month):
     """Returns the numbers of days from today"s date to the birthday date supplied."""
-    
+
     # Get today"s date
     today = datetime.date.today()
     day1 = today.day
     month1 = today.month
     year1 = today.year
-    
+
     day2 = birthday_day
     month2 = birthday_month
 
@@ -83,7 +83,7 @@ def days_till_birthday(birthday_day, birthday_month):
         if day1 > days_in_month(month1, year1):
             day1 = 1
             month1 += 1
-      
+
         if month1 > 12:
             month1 = 1
             year1 += 1
@@ -100,7 +100,7 @@ def days_till_birthday(birthday_day, birthday_month):
     while year1 != year2:
         totalDays += days_in_year(year1)
         year1 += 1
-        
+
     return totalDays
 
 if __name__ == "__main__":
@@ -118,7 +118,7 @@ if __name__ == "__main__":
     # Get total number of days till user"s birthday
     totalDays = days_till_birthday(day, month)
 
-    if totalDays != None:  # valid result
+    if totalDays is not None:  # valid result
         print("Total number of days till your birthday is", totalDays)
         if totalDays == 0:
             print("HAPPY BIRTHDAY!!!")

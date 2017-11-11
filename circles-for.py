@@ -16,4 +16,3 @@ turtle.pencolor(color)
 for num in range(number_circles):
     turtle.circle(100)
     turtle.left(360 / number_circles)
-

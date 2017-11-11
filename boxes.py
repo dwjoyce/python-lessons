@@ -17,7 +17,7 @@ for box in range(12):
     turtle.pencolor(random.choice(colors))
     turtle.pensize(5)
     for s in range(4):
-    	turtle.forward(length)
-    	turtle.left(90)
+        turtle.forward(length)
+        turtle.left(90)
     length += 20
     turtle.left(8)

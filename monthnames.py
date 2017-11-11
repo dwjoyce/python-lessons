@@ -14,7 +14,7 @@ elif month_num == 4:
     print("April")
 elif month_num == 5:
     print("May")
-elif month_num== 6:
+elif month_num == 6:
     print("June")
 elif month_num == 7:
     print("July")

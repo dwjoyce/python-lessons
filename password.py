@@ -8,10 +8,10 @@ password = input("Password? ")
 
 for line in password_file:
     line = line.strip()
-    u,p = line.split(",")  # puts the first part in variable u, and the second part in p, separated by a comma
+    u, p = line.split(",")  # puts the first part in variable u, and the second part in p, separated by a comma
     if u == username and p == password:
         print("Login succeeded!")
-        break       
+        break
 else:
     print("Login failed!")
 

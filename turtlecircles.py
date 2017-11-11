@@ -1,4 +1,4 @@
-# turtlecircles.y
+# turtlecircles.py
 # Program to draw a number of circles, panning out from the centre,
 # then turn, and drawing another line of circles.  Continue this forever!
 
